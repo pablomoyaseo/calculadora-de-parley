@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Parley</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body class="bg-body">
+    <header class="header contenedor pt-5">
+        <h1 class="titulo">Proyecto de Pablo Moya</h1>
+        <div class="header-logo">
+            <picture>
+                <source srcset="build/img/calculadora-parley.avif" type="image/avif">
+                <source srcset="build/img/calculadora-parley.webp" type="image/webp">
+                <img class="header-logo__imagen" loading="lazy" width="200" height="300" src="build/img/calculadora-parley.jpg" alt="Calculadora de Parley">
+            </picture>
+            <h2 class="titulo">Calculadora de Parley Con Ciclo</h2>
+        </div>
+    </header>
+    <main class="contenedor">
+        <form class="formulario" action="">
+            <div class="formulario__grid">
+                <fieldset>
+                    <legend class="formulario__legend">Ingrese el Monto de su Apuesta:</legend>
+                    <div class="formulario__campo">
+                        <label class="formulario__label formulario__label--apuesta" for="apuesta">Apuesta:</label>
+                        <input class="formulario__imput formulario__imput--apuesta" type="number" name="apuesta" id="apuesta" placeholder="Tu Apuesta" min="1">
+                    </div>
+                </fieldset>
+                <fieldset class="formulario__logros">
+                    <legend class="formulario__legend">Ingrese el Logro de sus Apuestas:</legend>
+                </fieldset>
+                
+            </div>
+            <div class="formulario__grid">
+                <fieldset class="cobrar">
+                    <legend class="formulario__legend">Monto a Cobrar:</legend>
+                    <div class="formulario__campo">
+                        <label class="formulario__label" for="total">Total:</label>
+                        <input class="formulario__imput formulario__imput--total" type="number" name="total" id="total" placeholder="Monto a Cobrar" disabled>
+                    </div>
+                </fieldset>
+                <input class="boton boton--calcular" type="button" value="Calcular">
+                <input class="boton boton--limpiar" type="button" value="Limpiar">
+                <div class="mensaje">
+                    <p class="mensaje__alerta mensaje__alerta--logro d-none">Por Favor Debe Rellenar todos los Logros que indico.</p>
+                    <p class="mensaje__alerta mensaje__alerta--apuesta d-none">Por favor Indica el Monto de tu Apuesta</p>
+                    <p class="mensaje__parrafo"></p>
+                </div>
+            </div>
+        </form>
+        <a class="boton boton--naranja" href="index.html">Calculadora de Parley Tradicional</a>
+    </main>
+
+    <section class="contenedor bg-white pt-4">
+        <h2 class="text-center p-2">Tecnologias Utilizadas en este Proyecto:</h2>
+        <h3 class="titulo-tecnologia">HTML</h3>
+        <ul>
+            <li>Elementos de Formularios (fieldset, legend, label, input, button)</li>
+            <li>Uso de Google Fonts</li>
+            <li>Uso de Etiquetas de Maquetado (Header, Main, Section, Footer). </li>
+            <li>Uso de etiqueta Picture para incluir formato de imagen de nueva Generación (AVIF y WEBP).</li>
+        </ul>
+        <h3 class="titulo-tecnologia">CSS</h3>
+        <ul>
+            <li>Normalize.</li>
+            <li>SCSS.</li>
+            <li>Use and Forward (SCSS). Nueva forma de importar hojas de Estilos en SASS Y SCSS.</li>
+            <li>Uso de gradients.</li>
+            <li>Uso de Mixins y variables con SCSS.</li>
+            <li>CSS Grid y Flexbox.</li>
+            <li>Estilos a prompt y alert de Javscript.</li>
+        </ul>
+        <h3 class="titulo-tecnologia">Node JS</h3>
+        <ul>
+            <li>Gulp File.</li>
+            <li>Compilar SCSS.</li>
+            <li>Convertir a CSS.</li>
+            <li>Utilizar Autoprefixer.</li>
+            <li>Minificar CSS.</li>
+            <li>Mejor tamaño de imagenes.</li>
+            <li>Convertir imagenes a WEBP y a AVIF.</li>
+        </ul>
+        <h3 class="titulo-tecnologia">JavaScript</h3>
+        <ul>
+            <li>Modificar el DOM (Crear Elemento, agregar y remover clases.</li>
+            <li>Definicion de Variables.</li>
+            <li>Uso de Condicionales (If, Else).</li>
+            <li>Operadores de Comparación y Operadores Lógicos.</li>
+            <li>Uso de Funciones.</li>
+            <li>Escuchar Eventos.</li>
+            <li>Mejoramos y simplificamos el código de la Calculadora anterior reduciendo el código HTML y el Código Javascript. Pasamos de 225 lineas de código JS a 113.</li>
+            <li>Agregamos un elemento de Entrada en donde el usuario coloca la cantidad de juego a entrar y se crean los inputs en el formulario de acuerdo a la cantidad indicada. La limitamos a 20 para evitar coloquen valores muy altos o ciclos infinitos. </li>
+            <li>Utilizamos ciclos for, ciclos foreach, almacenamos valores en un Array y luego recorrimos con un ciclo foreach.</li>
+            <li>Reducimos la cantidad de variables creadas.</li>
+            <li>Uso de Elementos de Entrada para el Usuario (prompt) y elementos de salida (alert).</li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <p>Pablo Moya 2022. Correo: ing.pmoya@gmail.com</p>
+    </footer>
+
+    <script src="build/js/app-ciclo.js"></script>
+</body>
+</html>
